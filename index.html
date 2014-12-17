@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Happy Birthday</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    @font-face {
+      font-family: digit;
+      src: url('digital-7_mono.ttf') format("truetype");
+    }
+  </style>
+  <link href="css/default.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+  <div id="mainDiv">
+  <audio loop="loop" autoplay="autoplay">
+    <source src="WinterChild.mp3" type="audio/mpeg" />
+  </audio>
+    <div id="content">
+      <div id="code">
+        <span class="comments">/**</span><br />
+        <span class="space"/><span class="comments">* Hôm nay, ngày 17 tháng 12, sinh nhật em,</span><br />
+        <span class="space"/><span class="comments">* nên anh viết vài dòng cho em, mừng em thêm tuổi mới.</span><br />
+        <span class="space"/><span class="comments">*/</span><br />
+        Girl u = <span class="keyword">new</span> Girl(<span class="string">"Thanh"</span>);<br />
+        Boy I = <span class="keyword">new</span> Boy(<span class="string">"Tuấn"</span>,u);<br />
+        <span class="comments">// Đầu tiên, </span><br />
+        <span class="comments">// mừng cả (gần???) chục năm chúng ta có mặt trong cuộc đời của nhau </span><br />
+        I.love(u);<br />
+        
+        <span class="comments">// Mong em luôn</span><br />
+        while(true){</br>
+        <span class="comments">&nbsp // may mắn,</span><br />
+        &nbsp  u.fortune++;</br>
+        <span class="comments">&nbsp // hạnh phúc,</span><br />
+        &nbsp  u.happiness++;</br>
+        <span class="comments">&nbsp // và đặc biệt là thêm ĐẸPPPP!!!</span><br />
+        &nbsp  u.beautiful++;</br>
+        };</br>
+        <span class="comments">// Ôm em,</span><br />
+        i.hug(u);<br>
+        <span class="comments">// thêm một cái hôn</span><br />
+        i.kiss(u);<br>
+        <span class="comments">// và nói</span><br />
+        i.say(u,<span class="string">"Happy Birthday !"</span>);
+      </div>
+      <div id="loveCake">
+        <canvas id="garden"></canvas>
+        <div id="words">
+          <div id="messages">
+          </br>
+          </br>
+          </br>
+          </br>
+            Chúc mừng sinh nhật Nhã Thanh!!!
+            <br>
+            <center>17/12<br />1995-2014</center>
+          </div>
+          <div id="loveu">
+            Bánh cho em mà em không ăn được =))), như em vừa ăn đồ mà hỏi anh ăn không :((<br/>
+            <div class="signature">- A.Tuấn</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <script type="text/javascript">
+    var offsetX = $("#loveCake").width() / 2;
+    var offsetY = $("#loveCake").height() / 2 - 55;
+    
+    if (!document.createElement('canvas').getContext) {
+      var msg = document.createElement("div");
+      msg.id = "errorMsg";
+      msg.innerHTML = "Trình duyệt không hỗ trợ HTML5!<br/>Vui lòng sử dụng Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+      document.body.appendChild(msg);
+      $("#code").css("display", "none")
+        document.execCommand("stop");
+    } else {
+      setTimeout(function () {
+        startCakeAnimation();
+      }, 5000);
+
+      adjustCodePosition();
+      $("#code").typewriter();
+    }
+  </script>
+</body>
+</html>
